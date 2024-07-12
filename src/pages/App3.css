@@ -1,0 +1,104 @@
+@keyframes slideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    }
+  }
+  
+  .App {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    animation: slideIn 1s ease-out;
+    position: relative;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    resize: vertical;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  }
+  
+  button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: glow 2s infinite;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #3e8e41, #379237);
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background: linear-gradient(135deg, #358e3a, #2f7e32);
+    transform: scale(0.95);
+  }
+  
+  embed {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  embed:hover {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    .App {
+      padding: 1rem;
+    }
+  
+    textarea {
+      height: 150px;
+    }
+  
+    button {
+      padding: 8px 16px;
+    }
+  
+    embed {
+      height: 300px;
+    }
+  }
+  
